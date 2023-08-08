@@ -1,20 +1,14 @@
-//spread parameters in the array literals
-
+// Using Spread Parameter with Array Literals:
 const fruits = ["apple", "banana"];
 const moreFruits = ["orange", "grape"];
 
-const result = [...fruits,...moreFruits];
+const allFruits = [...fruits, ...moreFruits];
+console.log(allFruits); // Output: ["apple", "banana", "orange", "grape"]
 
-// for (let index = 0; index < moreFruits.length; index++) {
-//     const element = moreFruits[index];
-//     result.push(element);
-    
-// }
 
-// for (let index = 0; index < fruits.length; index++) {
-//     const element = moreFruits[index];
-//     result.push(element);
-    
-// }
+//cloning arrays;
+const originalArray = [1, 2, 3];
+const cloneArray = [...originalArray];
 
-console.log(result);
+console.log(cloneArray); // Output: [1, 2, 3]
+console.log(originalArray === cloneArray); // Output: false (they are separate arrays)
