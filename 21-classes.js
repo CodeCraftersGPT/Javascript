@@ -1,23 +1,19 @@
-class BankAccount{
-    constructor(accountName1,accountNumber1){
-        this.accountName = accountName1;
-        this.accountNumber = accountNumber1;
-        this.balance=2000;
+class Person {
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
     }
-
-    withDraw(amount){
-        this.balance = this.balance - amount;
+  
+    greet() {
+      console.log(`Hello, ${this.firstName} ${this.lastName}!`);
     }
+  }
 
-    deposit(amount){
-        this.balance = this.balance + amount;
-    }
-}
-var manjithAccount = new BankAccount('Manjith',1001);
+  const person1 = new Person("John", "Doe");
+const person2 = new Person("Alice", "Smith");
 
-console.log(manjithAccount.accountName);
-console.log(manjithAccount.balance);
+person1.greet(); // Output: "Hello, John Doe!"
+person2.greet(); // Output: "Hello, Alice Smith!"
 
-manjithAccount.deposit(100000000000);
 
-console.log(manjithAccount.balance);
+  
