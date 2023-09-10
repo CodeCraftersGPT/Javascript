@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Example</title>
+</head>
+<body>
+    <h1>Fetch API Example</h1>
+    <div id="data-container"></div>
+
+    <script>
+        // Function to fetch data from an API and display it on the page
+        function fetchData() {
+            const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
+
+            fetch(apiUrl)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    // Display the fetched data on the page
+                    const dataContainer = document.getElementById('data-container');
+                    dataContainer.innerHTML = `
+                        <h2>Data from the API:</h2>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    `;
+                })
+                .catch((error) => {
+                    console.error('Fetch error:', error);
+                });
+        }
+
+        // Call the fetchData function when the page loads
+        window.addEventListener('load', fetchData);
+    </script>
+</body>
+</html>
