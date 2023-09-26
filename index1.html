@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <script src="10-array-dt.js"></script>
+  <script>
+
+
+  </script>
     
 </head>
 <body>
+    <input type="text" name="" id="">
+    <button type="button" >save</button>
+    <App/>
+    <script>
+      document.addEventListener('load',()=>{
+        const input=document.querySelector('input');
+        const button=document.querySelector('button');
+        button.addEventListener('click',()=>{
+          console.log('event1');
+        })
+        button.addEventListener('click',()=>{
+          console.log('event2');
+        })
+      });
+      
+    </script>
 </body>
 </html>

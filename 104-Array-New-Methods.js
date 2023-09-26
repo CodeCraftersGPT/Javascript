@@ -39,7 +39,15 @@ console.log(hasEven); // Output: true
 //every
 const numbers5 = [1, 2, 3, 4, 5];
 const allEven = numbers.every(num => num % 2 === 0);
-console.log(allEven); // Output: true
+console.log(allEven); // Output: false
+
+
+const numbers6 = [1, 2, 3, 4, 5];
+
+const doubledNumbers = numbers6.map(num => num * 2);
+
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+
 
 
 

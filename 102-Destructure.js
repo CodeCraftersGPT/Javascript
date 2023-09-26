@@ -17,9 +17,12 @@ console.log(s); // Output: 4 (s uses the default value because there's no corres
 
 // Basic object destructuring
 const person = { firstName: "John", lastName: "Doe" };
-const { firstName, lastName } = person;
+const { firstName } = person;
 console.log(firstName); // Output: John
 console.log(lastName); // Output: Doe
+
+const formState = { errors: { email: { message: "Email is required" } }, touched: { email: true } };
+const { errors } = formState;
 
 // Renaming variables during destructuring
 const { firstName: fName, lastName: lName } = person;
